@@ -17,6 +17,8 @@ Things to do next:
 (2) Create pretty interface to do this. (Web app?)
 (3) Write script to convert input into corresponding file type.
 
+- Output to Power Editor 
+
 GAH I need to incorporate correspondingi ad name creation.
 
 """
@@ -30,6 +32,7 @@ for i in CategoryNames:
 	i = []
 	CategoryLists.append(i)
 """
+
 #Create arrays for each property
 AdName = []
 Title = []
@@ -61,6 +64,7 @@ output = [("Adname", "Title", "Body", "LinkDescription")]
 #Get iterations.
 for t in itertools.product(*iterables):
     output.append(t)
+    
 
 print output
 
@@ -68,3 +72,4 @@ print output
 outputfile = open(myoutput, 'wb')
 wr = csv.writer(outputfile, quoting=csv.QUOTE_ALL)
 wr.writerows(output)
+
